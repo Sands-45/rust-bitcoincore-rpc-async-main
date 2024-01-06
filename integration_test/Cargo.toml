@@ -1,0 +1,13 @@
+[package]
+name = "integration_test_async"
+version = "0.1.0"
+authors = ["Jeremy Rubin <j@rubin.io>", "Steven Roose <steven@stevenroose.org>"]
+edition="2018"
+publish=false
+
+[dependencies]
+bitcoincore-rpc-async = { path = "../client" }
+bitcoin = { version = "0.28.0-rc.3", features = [ "use-serde", "rand" ], package = "sapio-bitcoin" }
+lazy_static = "1.4.0"
+log = "0.4"
+tokio = { version = "1", features = ["full"] }
